@@ -1,4 +1,7 @@
-/* 1st create an array
+/* 
+STEP 1
+
+1st create an array
 It will store all the correct answers of the quiz
  
 How are we going to store these?
@@ -10,6 +13,8 @@ const correctAnswers = ["A", "A", "B", "A"];
 // attach an event listener to the form
 
 const form = document.querySelector(".quiz-form");
+
+result = document.querySelector(".result");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -27,5 +32,16 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  console.log(score);
+  //console.log(score);
+  //show result
+  scrollTo(0, 0);
+  result.querySelector("span").textContent = `${score}%`;
+  result.classList.remove("d-none");
 });
+
+// STEP 2
+// DISPLAYING THE SCORE
+
+result = document.querySelector(".result");
+
+// update the result with the score
