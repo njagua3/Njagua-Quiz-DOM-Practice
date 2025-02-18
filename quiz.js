@@ -35,8 +35,19 @@ form.addEventListener("submit", (e) => {
   //console.log(score);
   //show result on page
   scrollTo(0, 0);
-  result.querySelector("span").textContent = `${score}%`;
+  //result.querySelector("span").textContent = `${score}%`;
   result.classList.remove("d-none");
+
+  //Score Animation
+  let output = 0;
+  const timer = setInterval(() => {
+    result.querySelector("span").textContent = `${output}%`
+    if (output === score) {
+      clearInterval(timer);
+    } else{
+      output++;
+    }
+  }, 10);
 });
 
 // STEP 2
@@ -72,5 +83,16 @@ setTimeout() - Method stored in the window object
   setTimeout(() => {
   alert("Hi Kevin!");
 }, 2000);
+
+ANIMATING THE SCORE 
+
+SETINTERVAL = setInterval()
+  Similar to seTimeout but in setinterval the fn keeps
+  firing every amount of time thats specified
+let i = 0;
+setInterval(()=>{
+  console.log('hi')
+  i++;
+}, 1000)
 
 */
