@@ -58,5 +58,19 @@ console.log('hello');
 is the same as 
 windows.console.log('hello')
 
+document.querySelector('form')
+is the same as
+window.document.querySelector('form')
+
+setTimeout() - Method stored in the window object
+
+  - it takes a callback fn and fires the callback after a certain
+  amount of time.
+  - The time is specified as a second argument. 
+  -What this will do is count then perform the callback
+  
+  setTimeout(() => {
+  alert("Hi Kevin!");
+}, 2000);
 
 */
